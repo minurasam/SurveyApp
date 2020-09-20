@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Overview = () => {
+export const Overview = () => {
     return (
         <div className='home'>
             <h1>Overview</h1>
