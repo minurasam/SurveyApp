@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const errorHandler = require('./middleware/error');
 
 require('dotenv').config();
 
@@ -12,7 +13,12 @@ app.use(express.json());
 
 //database connection to mongoDB
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
+mongoose.connect(uri, {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true, 
+    useCreateIndex: true, 
+    useFindAndModify: true
+});
 
 const connection = mongoose.connection;
 connection.once('open', () => {
@@ -22,10 +28,23 @@ connection.once('open', () => {
 //api endpoints 
 // const exercisesRouter = require('./routes/exercises');
 const userRouter = require('./routes/userRoutes');
+const private = require('./routes/privateRoutes');
 
-// app.use('/exercises', exercisesRouter);
 app.use('/users', userRouter);
+app.use('/private', private);
+
+// Error Handler (Should be last of middleware)
+app.use(errorHandler);
+
+
 
 app.listen(port, () => {
     console.log(`Server is running in port: ${port}`);
 });
+
+process.on("unhandledRejection", (err, promise) => {
+    console.log(`Logged Error: $(err)`);
+    server.close(() => process.exit(1));
+});
+
+module.exports = app;
