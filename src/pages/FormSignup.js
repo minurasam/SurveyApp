@@ -16,7 +16,22 @@ export const FormSignup = ({submitForm}) => {
             <form className='form' onSubmit={handleSubmit}>
                 <h1>Get started with us today! Create your account
                     by filling out the information below.</h1>   
-
+                <div className='form-inputs'>
+                    <label htmlFor='name' className='form-label'>
+                        Full Name 
+                    </label>
+                    <input id='name' 
+                           type='text' 
+                           name='name' 
+                           className='form-input' 
+                           placeholder='Enter your full name'
+                           value={values.name}
+                           onChange={handleChange}        
+                    />
+                    {
+                        errors.name && <p>{errors.name}</p>
+                    }
+                </div>
                 <div className='form-inputs'>
                     <label htmlFor='username' className='form-label'>
                         Username 

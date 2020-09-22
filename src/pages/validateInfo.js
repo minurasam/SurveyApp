@@ -1,6 +1,10 @@
 export default function validateInfo(values) {
     let errors = {}
 
+    if(!values.name.trim()) 
+    {
+        errors.name = "Name required";
+    }
     if(!values.username.trim()) 
     {
         errors.username = "Username required";

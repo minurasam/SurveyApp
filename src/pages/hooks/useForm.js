@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 const useForm = (callback, validate) => {
     const [values, setValues] = useState({
+        name: '',
         username: '',
         email: '',
         password: '',
@@ -12,10 +13,10 @@ const useForm = (callback, validate) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     
     const handleChange = e => {
-        const { name, value } = e.target;
+        const { names, value } = e.target;
         setValues({
             ...values,
-            [name]:value
+            [names]:value
         });
     };
 

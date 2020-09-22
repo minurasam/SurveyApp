@@ -21,10 +21,10 @@ connection.once('open', () => {
 
 //api endpoints 
 // const exercisesRouter = require('./routes/exercises');
-// const userRouter = require('./routes/users');
+const userRouter = require('./routes/userRoutes');
 
 // app.use('/exercises', exercisesRouter);
-// app.use('/users', userRouter);
+app.use('/users', userRouter);
 
 app.listen(port, () => {
     console.log(`Server is running in port: ${port}`);
