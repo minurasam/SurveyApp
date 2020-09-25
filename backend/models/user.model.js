@@ -40,19 +40,6 @@ const userSchema = new mongoose.Schema({
         minlength: 8,
         select: false
     },
-
-    // passwordConfirm: 
-    // {
-    //     type: String,
-    //     required: [true, 'confirm your password'],
-    //     validate: {
-    //         //this only works on CREATE and SAVE!!!
-    //         validator: function(el){
-    //             return el === this.password; // abc === abc is true // abc === xyz is false gives a validatoin error
-    //         },
-    //         message: 'Passwords do not match'
-    //     }
-    // },
     resetPasswordToken: String,
     resetPasswordExpire: Date
 }, 
@@ -81,18 +68,6 @@ userSchema.methods.getSignedJwtToken = function () {
       expiresIn: process.env.JWT_EXPIRES_IN,
     });
 };
-
-userSchema.methods.getResetPasswordToken = function() {
-    const resetToken = crypto.randomBytes(20).toString("hex");
-
-    this.resetPasswordToken = crypto
-        .createHash("sha256")
-        .update(resetToken)
-        .digest("hex");
-    
-    this.resetPasswordExpire = Date.now() + 10 * (60 * 1000);
-    return resetToken;
-}
 
 userSchema.methods.getResetPasswordToken = function () {
     const resetToken = crypto.randomBytes(20).toString("hex");

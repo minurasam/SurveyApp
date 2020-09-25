@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
 import {SidebarData} from './SidebarData'
 import SubMenu from './SubMenu'
 import { IconContext } from 'react-icons/lib'
+import './sidebar.css';
 
 
 const Nav = styled.div`
@@ -44,6 +45,7 @@ const SidebarWrap = styled.nav`
 `;
 
 
+
 const Sidebar = () => {
     const [Sidebar, setSidebar] = useState(false)
     
@@ -51,7 +53,7 @@ const Sidebar = () => {
     
     return (
         <>
-        <IconContext.Provider value={{ color: 'green'}}>
+        <IconContext.Provider value={{ color: 'light blue'}}>
         <Nav>
             <NavIcon to="#">
                 <FaIcons.FaBars onClick={showSidebar} />

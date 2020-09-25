@@ -1,0 +1,5 @@
+.logout-btn {
+    display: flex;
+    flex: auto;
+    flex-direction: column-reverse;
+}

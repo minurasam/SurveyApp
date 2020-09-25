@@ -75,10 +75,14 @@
 
 .form h1 {
   font-size: 2rem;
-  text-align: start;
+  text-align: center;
   width: 90%;
   margin-bottom: 1rem;
   color: #fff;
+}
+.error-message {
+  color: rgb(223, 10, 10);
+  font-size: 2rem;
 }
 
 .form-inputs {

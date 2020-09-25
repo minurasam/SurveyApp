@@ -46,7 +46,7 @@ exports.login = catchAsync(async (req, res, next) => {
     if(!username || !password) {
         return next(new AppError('Please provide Username and Passowrd!', 400));
     }
-
+    try {
     //2) Check if user exists && password is correct
     const user = await User.findOne({username}).select('+password');
     //const correct = await user.correctPassword(password, user.password);
@@ -58,11 +58,9 @@ exports.login = catchAsync(async (req, res, next) => {
     //3) If everything is ok, send token  to client
     const token = signToken(user._id);
     sendToken(user, 200, res);
-
-    res.status(200).json({
-        status: 'success',
-        token
-    });
+    } catch (err) {
+        next(err)
+    }
 });
 
 exports.forgotpassword = catchAsync(async(req, res, next) => {
@@ -79,7 +77,7 @@ exports.forgotpassword = catchAsync(async(req, res, next) => {
 
         await user.save();
 
-        const resetUrl = `http://localhost:8000/passwordreset/${resetToken}`;
+        const resetUrl = `http://localhost:8000/users/resetpassword/${resetToken}`;
 
         const message = `
             <h1> You have requested a password reset </h1>

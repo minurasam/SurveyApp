@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
 import './App.css'; 
-import Sidebar from './components/Sidebar';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Overview from './pages/Overview';
-import {Reports, ReportsOne, ReportsTwo, ReportsThree, ReportsFour} from './pages/Reports'
-import Team from './pages/Team'
-import Form from './pages/Form'
+import Overview from './components/pages/Overview';
 
+//Routing
+import PrivateRoute from './components/routing/PrivateRoute';
+
+//Screens
+import PrivateScreen from "./components/screens/PrivateScreen";
+import FormLogin from "./components/screens/LoginScreen";
+import RegisterScreen from "./components/screens/SignupScreen";
+import ForgotPasswordScreen from "./components/screens/ForgotPasswordScreen";
+import ResetPasswordScreen from "./components/screens/ResetPasswordScreen";
 
 class App extends Component{
   render() {
     return (
-     <Router>
-      <Sidebar />
+     <Router> 
       <Switch>
-        <Route path="/overview/home" exact component={Form}/>
-        <Route path="/overview" exact component={Overview}/>
-        <Route path="/reports" exact component={Reports}/>
-        <Route path="/reports/reports1" exact component={ReportsOne}/>
-        <Route path="/reports/reports2" exact component={ReportsTwo}/>
-        <Route path="/reports/reports3" exact component={ReportsThree}/>
-        <Route path="/reports/reports4" exact component={ReportsFour}/>
-        <Route path="/overview/teams" exact component={Team}/>
+        <PrivateRoute exact path="/" component={PrivateScreen} /> 
+        <Route path="/signup" exact component={RegisterScreen}/>
+        <Route path="/login" exact component={FormLogin}/>
+        <Route exact path="/forgotpassword" component={ForgotPasswordScreen}/>
+        <Route exact path="/resetpassword/:resetToken" component={ResetPasswordScreen}/>
+        <Route exact path="/overview" component={Overview}/>
 
       </Switch>
      </Router>

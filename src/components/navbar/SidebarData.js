@@ -20,12 +20,7 @@ export const SidebarData = [
                 title: 'My Account',
                 path: '/account/myaccount',
                 icon: <MdIcons.MdAccountCircle />,
-            },
-            {
-                title: 'Signout',
-                path: '/overview/home',
-                icon: <RiIcons.RiTeamLine />,
-            },
+            }
         ]
 
     },
