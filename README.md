@@ -1,4 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React quickstart boilerplate for SurveyJS: Survey Library and Survey Creator 
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+## How to run this sample application
+ - git clone (https://github.com/minurasam/SurveyApp.git)
+ - cd SurveyApp
+ - npm i
+ - npm start
+ - open http://localhost:3000/ in your web browser
 
 ## Available Scripts
 
