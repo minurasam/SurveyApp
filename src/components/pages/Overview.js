@@ -1,24 +1,11 @@
 import React from 'react'
-import Sidebar from '../navbar/Sidebar';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import {Reports, ReportsOne, ReportsTwo, ReportsThree, ReportsFour} from './Reports'
-import Team from './Team'
-import './App.css'; 
 
-export const Overview = () => {
+const Overview1 = () => {
     return (
-        <Router>
-            <Sidebar />
-        <Switch>
-        <Route path="/reports" exact component={Reports}/>
-        <Route path="/reports/reports1" exact component={ReportsOne}/>
-        <Route path="/reports/reports2" exact component={ReportsTwo}/>
-        <Route path="/reports/reports3" exact component={ReportsThree}/>
-        <Route path="/reports/reports4" exact component={ReportsFour}/>
-        <Route path="/overview/teams" exact component={Team}/>
-        </Switch>
-        </Router>
+        <div className='overview'>
+            <iframe width="100%" height="1000px" src={"https://surveyjs.io/"} ></iframe>
+        </div>
     )
 }
 
-export default Overview;
+export default Overview1;

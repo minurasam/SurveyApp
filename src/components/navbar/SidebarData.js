@@ -3,7 +3,6 @@ import React from 'react'
 import * as AiIcons from 'react-icons/ai'
 import * as IoIcons from 'react-icons/io'
 import * as RiIcons from 'react-icons/ri'
-import * as MdIcons from 'react-icons/md'
 import * as HiIcons from 'react-icons/hi'
 
 
@@ -12,17 +11,9 @@ export const SidebarData = [
     {
         title: 'Account',
         path: '/account',
-        icon: <AiIcons.AiFillHome />,
+        icon: <AiIcons.AiOutlineFundView />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
-        subNav: [
-            {
-                title: 'My Account',
-                path: '/account/myaccount',
-                icon: <MdIcons.MdAccountCircle />,
-            }
-        ]
-
     },
     {
         title: 'Overview',
@@ -30,39 +21,36 @@ export const SidebarData = [
         icon: <AiIcons.AiFillHome />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
+
+    },
+    {
+        title: 'Projects',
+        path: '/projects',
+        icon: <RiIcons.RiSurveyLine />,
+        iconClosed: <RiIcons.RiArrowDownSFill />,
+        iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
             {
-                title: 'Users',
-                path: '/overview/users',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Teams',
-                path: '/overview/teams',
+                title: 'Create Project',
+                path: '/projects/create-project',
                 icon: <IoIcons.IoIosPaper />,
             },
         ]
 
     },
     {
-        title: 'Survey',
-        path: '/survey',
-        icon: <RiIcons.RiSurveyLine />,
+        title: 'Results',
+        path: '/results',
+        icon: <HiIcons.HiDocumentReport />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
             {
-                title: 'Surveys',
-                path: '/survey/surveys',
-                icon: <RiIcons.RiSurveyLine />,
-            },
-            {
-                title: 'Add Survey',
-                path: '/survey/addsurvey',
-                icon: <AiIcons.AiFillFileAdd />,
+                title: 'Projects',
+                path: '/results/projects',
+                icon: <IoIcons.IoIosPaper />,
             },
         ]
-
     },
     {
         title: 'Reports',
@@ -70,27 +58,5 @@ export const SidebarData = [
         icon: <HiIcons.HiDocumentReport />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
-        subNav: [
-            {
-                title: 'Report 1',
-                path: '/reports/reports1',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Report 2',
-                path: '/reports/reports2',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Report 3',
-                path: '/reports/reports3',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Report 4',
-                path: '/reports/reports4',
-                icon: <IoIcons.IoIosPaper />,
-            },
-        ]
     }
 ]

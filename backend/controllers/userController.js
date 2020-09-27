@@ -16,10 +16,9 @@ exports.getAllUsers = catchAsync(async (req, res, next) => {
 });
 
 exports.getUser = (req, res) =>{
-    res.status(500).json({
-        status: 'error',
-        message: 'This route is not yet defined!'
-    });
+    User.findById(req.params.id)
+        .then(users => res.json(users))
+        .catch(err => res.status(400).json('Error: ' + err));
 };
 
 exports.createUser = (req, res) =>{
@@ -30,10 +29,17 @@ exports.createUser = (req, res) =>{
 };
 
 exports.updateUser = (req, res) =>{
-    res.status(500).json({
-        status: 'error',
-        message: 'This route is not yet defined!'
-    });
+    var profilePic= req.file.path;
+    User.findById(req.params.id)
+        .then(users => {
+            users.name = req.body.name;
+            users.username = req.body.username;
+            users.profileImage = req.body.profilePic;
+    
+            users.save()
+                .then(() => res.json('User updated!'))
+                .catch(err => res.status(400).json('Error: ' + err));
+        })
 };
 
 exports.deleteUser = (req, res) =>{

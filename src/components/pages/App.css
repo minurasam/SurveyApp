@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 * {
+ 
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,11 +9,27 @@
 }
 .home,
 .reports,
-.survey,
 .account {
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+}
+.proj {
+  padding-left: 270px;
+  padding-right: 10px;
+}
+
+
+.overview {
+  padding-left: 250px;
+}
+
+.overview iframe {
+  position: relative;
+  z-index: 1;
+  top:0px;
+  left:0px;
+  overflow: auto;
 }

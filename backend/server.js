@@ -28,9 +28,11 @@ connection.once('open', () => {
 //api endpoints 
 // const exercisesRouter = require('./routes/exercises');
 const userRouter = require('./routes/userRoutes');
+const projectRouter = require('./routes/projectRoutes');
 const private = require('./routes/privateRoutes');
 
 app.use('/users', userRouter);
+app.use('/projects', projectRouter);
 app.use('/private', private);
 
 // Error Handler (Should be last of middleware)
