@@ -17,7 +17,7 @@ router
     .post(userController.createUser);
 
 router
-    .route('./:id')
+    .route('/update-profile/:id')
     .get(userController.getUser)
     .post(userController.updateUser)
     .delete(userController.deleteUser);

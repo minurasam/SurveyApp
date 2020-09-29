@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container,Row,Col,Form ,Button} from 'react-bootstrap';
+import { Container, Row, Col, Form, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import DefaultUserPic from "../../../assets/images/userprof.gif";
 const axios = require('axios');
@@ -16,22 +16,24 @@ class UserProfile extends React.Component {
         }
     }
 
-    fetchUserDetails=(id)=>{
+    fetchUserDetails=()=>{
         //console.log(user_id);
-        axios.get("http://localhost:8000/"+id,{
-            headers: {
-                "content-type": "application/json"
-              }
-        }).then(res=>{
-            console.log(res);
-            this.setState({email:res.data.results[0].email});
-            this.setState({profileImage:res.data.results[0].profileImage})
+        axios.get("http://localhost:8000/"+this.props.match.params._id)
+        .then(res=>{
+            this.setState({
+                name: res.data.name,
+                username: res.data.username,
+                email: res.data.email,
+                profImage: res.data.profImage
+            
+            })
         })
-        .catch(err=>console.log(err))
+        .catch(function (error) {
+            console.log(error);
+          })
     }
 
     changeProfileImage=(event)=>{
-       
         this.setState({uploadedFile:event.target.files[0]});
     }
 
@@ -40,10 +42,10 @@ class UserProfile extends React.Component {
         //create object of form data
         const formData=new FormData();
         formData.append("profileImage",this.state.uploadedFile);
-        formData.append("id",this.state._id);
+        formData.append("id",this.state.id);
 
         //update-profile
-        axios.post("http://localhost:5000/userapi/update-profile/",formData,{
+        axios.post("http://localhost:8000/update-profile/",formData,{
             headers: {
                 "content-type": "application/json"
               }
@@ -57,69 +59,81 @@ class UserProfile extends React.Component {
 
 
     componentDidMount(){
-     this.fetchUserDetails(this.state.user_id);
+     this.fetchUserDetails(this.state.id);
     }
 
 render(){
 
     if(this.state.profileImage){
         var imagestr=this.state.profileImage;
-        imagestr = imagestr.replace("public/", "");
-        var profilePic="http://localhost:5000/"+imagestr;
+        imagestr = imagestr.replace("assets/images", "");
+        var profilePic = "http://localhost:8000/"+imagestr;
     }else{
-         profilePic=DefaultUserPic;
+         profilePic = DefaultUserPic;
     }
-
     return (
-        <Container>
-        <Row>
+    <Container style=
+    {{ 
+        fontColor: "black", 
+        paddingLeft: "270px", 
+        paddingRight: "10px", 
+        marginTop:"100px" 
+    }}>
+     <Row>
        <Col>
-       <img src={profilePic} alt="profils pic" />
-       </Col>
-        <Col>
-            <h1>User Profile</h1>
-            <Form className="form">     
-    <p>{this.state.msg}</p>
-    <Form.Group controlId="formCategory1">
-    <Form.Label>Name</Form.Label>
-    <Form.Control type="text" defaultValue={this.state.name}/>
-  
-    </Form.Group>
-    <Form.Group controlId="formCategory1">
-        <Form.Label>Username</Form.Label>
-        <Form.Control type="text" defaultValue={this.state.username}/>
-    
-    </Form.Group>
-    <Form.Group controlId="formCategory2">
-        <Form.Label>Email</Form.Label>
-        <Form.Control type="email" defaultValue={this.state.email} />
-    
-    </Form.Group>
-    
-    <Form.Group controlId="formCategory4">
-        <Form.Label>Profile Image</Form.Label>
-        <Form.Control type="file" name="profileImage" onChange={this.changeProfileImage}/>
+           <img src={profilePic} alt="profils pic" />
+            <h1 style={{ paddingLeft: "35px"}}>User Profile</h1>
+
+    <Form className="form">
+
+        <Form.Group controlId="formCategory1">
+            <Form.Label style={{ color: "black"}}>
+                Name
+            </Form.Label>
+            <Form.Control type="text" defaultValue={this.state.name}/>
         </Form.Group>
-    <Button variant="primary" onClick={this.UpdateProfileHandler}>Update Profile</Button>
+
+        <Form.Group controlId="formCategory1">
+            <Form.Label style={{ color: "black"}}>
+                Username
+            </Form.Label>
+            <Form.Control type="text" defaultValue={this.state.username}/>
+        </Form.Group>
+        <Form.Group controlId="formCategory2">
+            <Form.Label style={{ color: "black"}}>
+                Email
+            </Form.Label>
+            <Form.Control type="email" defaultValue={this.state.email} />
+        </Form.Group>
+        
+        <Form.Group style={{ color: "black", paddingLeft: "100px"}} controlId="formCategory4">
+            <Form.Label style={{ color: "black", paddingLeft: "100px"}}>
+                Profile Image
+            </Form.Label>
+            <Form.Control style={{ color: "black", paddingLeft: "100px"}} type="file" name="profileImage" onChange={this.changeProfileImage}/>
+            </Form.Group>
+        
+        <Button style={{ justifySelf:"center"}} variant="primary" onClick={this.UpdateProfileHandler}>
+            Update Profile
+        </Button>
     </Form>
     </Col>
 
-       </Row>
-        </Container>
+    </Row>
+</Container>
     )
 }
 }
 
 const mapStatetoProps=(state)=>{
-    return{
-        user_id:state.user.userDetails.userid,
+    return{ 
+        name:state.user.name,
         username:state.user.userDetails.username,
-       email:state.user.email,
-       profileImage: state.user.profileImage,
-       msg:state.user.msg
+        email:state.user.email,
+        profileImage: state.user.profileImage
     }
    }
    
    
 
-   export default connect(mapStatetoProps)(UserProfile);
+export default UserProfile;

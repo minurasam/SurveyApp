@@ -10,6 +10,7 @@ import CreateProject from './project/CreateProject';
 import EditProject from './project/EditProject';
 import Overview from './Overview'
 import './App.css'; 
+import UserProfile from './userProfile/userProfile'
 
 
 export const PrivateScreen = ({ history }) => {
@@ -55,15 +56,16 @@ export const PrivateScreen = ({ history }) => {
       <Router>
         <div style={{ display:"flex", flexDirection: "column"}}>
           <Sidebar />  
-          <button style={{ color:"white", alignItems: "center", marginLeft: "10", backgroundColor: "black"}} className="logout-btn" onClick={logoutHandler}>Logout</button>
+          <button style={{ color:"white", alignItems: "center", marginLeft: "auto", backgroundColor: "Green", padding: "5px 5px 5px 5px"}} className="logout-btn" onClick={logoutHandler}>Logout</button>
         </div>
         <Switch>        
         <Route path="/reports" exact component={Reports}/>
-        <Route path="/overview/teams" exact component={Team}/>
+        <Route path="/account" component={UserProfile}/>
         <Route path="/projects" exact component={Project}/>
         <Route path="/projects/create-project" exact component={CreateProject}/>
         <Route path="/edit/:id" component={EditProject}/>
-        <Route path="/overview" component={Overview}/>
+        <Route path="/" component={Overview}/>
+        
         </Switch>
         </Router>
       <div style={{ background: "green", color: "white" }}>{privateData}</div>
