@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import { Navbar, NavbarBrand } from 'reactstrap'
-import './App.css';
+import './App.css'; 
+import Sidebar from './components/Sidebar';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Overview from './pages/Overview';
+import {Reports, ReportsOne, ReportsTwo, ReportsThree, ReportsFour} from './pages/Reports'
+import Team from './pages/Team'
 
 
 class App extends Component{
   render() {
     return (
-      <div className="App">
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">Home</NavbarBrand>
-            <NavbarBrand href="/">Users</NavbarBrand>
-            <NavbarBrand href="/">Survey</NavbarBrand>
-            <NavbarBrand href="/">Surey Report</NavbarBrand>
-          </div>
-        </Navbar>
-      </div>
+     <Router>
+      <Sidebar />
+      <Switch>
+        <Route path="/overview" exact component={Overview}/>
+        <Route path="/reports" exact component={Reports}/>
+        <Route path="/reports/reports1" exact component={ReportsOne}/>
+        <Route path="/reports/reports2" exact component={ReportsTwo}/>
+        <Route path="/reports/reports3" exact component={ReportsThree}/>
+        <Route path="/reports/reports4" exact component={ReportsFour}/>
+        <Route path="/overview/teams" exact component={Team}/>
+
+      </Switch>
+     </Router>
     );
   }
-  
 }
 
 export default App;
