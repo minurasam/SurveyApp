@@ -7,6 +7,14 @@ import * as MdIcons from 'react-icons/md'
 import * as HiIcons from 'react-icons/hi'
 
 
+export const SignInData = [
+    {
+        title: 'SignIn',
+        path: '/overview/home',
+        icon: <FaIcons.FaSignInAlt />,
+    }
+]
+
  
 export const SidebarData = [
     {
@@ -23,7 +31,7 @@ export const SidebarData = [
             },
             {
                 title: 'Signout',
-                path: '/overview/home',
+                path: '/overview',
                 icon: <RiIcons.RiTeamLine />,
             },
         ]
@@ -75,27 +83,5 @@ export const SidebarData = [
         icon: <HiIcons.HiDocumentReport />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
-        subNav: [
-            {
-                title: 'Report 1',
-                path: '/reports/reports1',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Report 2',
-                path: '/reports/reports2',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Report 3',
-                path: '/reports/reports3',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Report 4',
-                path: '/reports/reports4',
-                icon: <IoIcons.IoIosPaper />,
-            },
-        ]
     }
 ]

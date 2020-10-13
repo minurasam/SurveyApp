@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
-import {SidebarData} from './SidebarData'
+import {SidebarData, SignInData} from './SidebarData'
 import SubMenu from './SubMenu'
 import { IconContext } from 'react-icons/lib'
 
@@ -23,6 +23,11 @@ const NavIcon = styled(Link)`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+`;
+const Sign = styled(Link)`
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: right;
 `;
 
 
@@ -52,10 +57,16 @@ const Sidebar = () => {
     return (
         <>
         <IconContext.Provider value={{ color: 'green'}}>
+
         <Nav>
             <NavIcon to="#">
                 <FaIcons.FaBars onClick={showSidebar} />
             </NavIcon>
+            <Sign>
+            {SignInData.map((item, index) => {
+                return <SubMenu item={item} key={index} /> 
+            })}
+            </Sign>
         </Nav>
         <SidebarNav Sidebar = {Sidebar}>
             <SidebarWrap>
