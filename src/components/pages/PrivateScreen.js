@@ -61,11 +61,11 @@ export const PrivateScreen = ({ history }) => {
         <Switch>        
  
         <Route path="/account" component={UserProfile}/>
+        <Route path="/reports" exact component={App}/>
         <Route path="/projects" exact component={Project}/>
         <Route path="/projects/create-project" exact component={CreateProject}/>
         <Route path="/edit/:id" component={EditProject}/>
         <Route path="/" component={Overview}/>
-        <Route path="/reports" exact component={App}/>
         
         </Switch>
         
