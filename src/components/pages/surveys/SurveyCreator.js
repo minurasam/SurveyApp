@@ -58,7 +58,7 @@ class SurveyCreator extends Component {
     this.surveyCreator.render("surveyCreatorContainer");
   }
   render() {
-    return (<div>
+    return (<div style={{ paddingLeft:"250px"}}>
       <script type="text/html" id="custom-tab-survey-templates">
         {`<div id="test">TEST</div>`}
       </script>
