@@ -22,6 +22,6 @@ export default class SurveyAnalyticsDatatables extends Component {
     this.visPanel.render(document.getElementById("summaryContainer"));
   }
   render() {
-    return <div id="summaryContainer"></div>;
+    return <div style={{ paddingLeft:"250px"}} id="summaryContainer"></div>;
   }
 }

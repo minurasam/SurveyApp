@@ -11,7 +11,11 @@ import EditProject from './project/EditProject';
 import Overview from './Overview'
 import './App.css'; 
 import UserProfile from './userProfile/userProfile'
-import SurveyCreator from './surveys/SurveyCreator'
+import SurveyCreator from './surveys/Creator'
+import Surveys from './surveys/Survey'
+import SurveyAnalytics from './surveys/SurveyAnalytics'
+import SurveyAnalyticsDatatables from './surveys/SurveyAnalyticsDatatables'
+import SurveyAnalyticsTabulator from './surveys/SurveyAnalyticsTabulator'
 
 
 export const PrivateScreen = ({ history }) => {
@@ -61,8 +65,12 @@ export const PrivateScreen = ({ history }) => {
         <Switch>        
  
         <Route path="/account" component={UserProfile}/>
-        <Route path="/reports" exact component={SurveyCreator}/>
+        <Route path="/projects/create-survey" exact component={SurveyCreator}/>
         <Route path="/projects" exact component={Project}/>
+        <Route path="/reports/analytics" exact component={SurveyAnalytics} />
+        <Route path="/reports/tabulator" exact component={SurveyAnalyticsTabulator} />
+        <Route path="/reports/tables" exact component={SurveyAnalyticsDatatables} />
+        <Route path="/projects/surveys" exact component={Surveys}/>
         <Route path="/projects/create-project" exact component={CreateProject}/>
         <Route path="/edit/:id" component={EditProject}/>
         <Route path="/" component={Overview}/>

@@ -35,6 +35,16 @@ export const SidebarData = [
                 path: '/projects/create-project',
                 icon: <IoIcons.IoIosPaper />,
             },
+            {
+                title: 'My Surveys',
+                path: '/projects/surveys',
+                icon: <IoIcons.IoIosPaper />,
+            },
+            {
+                title: 'Create Survey',
+                path: '/projects/create-survey',
+                icon: <IoIcons.IoIosPaper />,
+            },
         ]
 
     },
@@ -58,5 +68,22 @@ export const SidebarData = [
         icon: <HiIcons.HiDocumentReport />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
+        subNav: [
+            {
+                title: 'Table',
+                path: '/reports/tables',
+                icon: <HiIcons.HiDocumentReport />,
+            },
+            {
+                title: 'Analytics',
+                path: '/reports/analytics',
+                icon: <HiIcons.HiDocumentReport />,
+            },
+            {
+                title: 'Tabulator',
+                path: '/reports/tabulator',
+                icon: <HiIcons.HiDocumentReport />,
+            }
+        ]
     }
 ]

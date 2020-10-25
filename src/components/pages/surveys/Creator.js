@@ -1,10 +1,10 @@
 import React from "react";
 import SurveyCreator from "./SurveyCreator";
 
-export function CreatorPage() {
+export default function CreatorPage() {
     return (
       <div>
-        <h2>Survey Creator - create a new survey</h2>
+        <h2 style={{ paddingLeft:"250px"}}>Create a new survey</h2>
         <SurveyCreator />
       </div>
     );

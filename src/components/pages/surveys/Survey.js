@@ -50,7 +50,7 @@ function onComplete(result) {
 }
 
 
-export function SurveyPage() {
+export default function SurveyPage() {
     var model = new Survey.Model(json);
     return (
     <div className="container">
