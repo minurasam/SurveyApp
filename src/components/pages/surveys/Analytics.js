@@ -1,10 +1,10 @@
 import React from "react";
 import SurveyAnalytics from "./SurveyAnalytics";
 
-export function AnalyticsPage() {
+export default function AnalyticsPage() {
   return (
     <div>
-      <h2>Analytics Pack - visualize survey results</h2>
+      <h2 style={{ paddingLeft: "260px"}}>Analytics Pack - Visualize Survey Results</h2>
       <SurveyAnalytics />
     </div>
   );

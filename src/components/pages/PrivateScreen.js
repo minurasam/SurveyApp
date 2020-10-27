@@ -3,8 +3,6 @@ import axios from "axios";
 import React from 'react';
 import Sidebar from '../navbar/Sidebar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import {Reports} from './Reports';
-import Team from './Team';
 import Project from './project/Projects';
 import CreateProject from './project/CreateProject';
 import EditProject from './project/EditProject';
@@ -13,9 +11,8 @@ import './App.css';
 import UserProfile from './userProfile/userProfile'
 import SurveyCreator from './surveys/Creator'
 import Surveys from './surveys/Survey'
-import SurveyAnalytics from './surveys/SurveyAnalytics'
-import SurveyAnalyticsDatatables from './surveys/SurveyAnalyticsDatatables'
-import SurveyAnalyticsTabulator from './surveys/SurveyAnalyticsTabulator'
+import AnalyticsPage from './surveys/Analytics'
+import AnalyticsTabulatorPage from './surveys/AnalyticsTabulator'
 
 
 export const PrivateScreen = ({ history }) => {
@@ -67,14 +64,12 @@ export const PrivateScreen = ({ history }) => {
         <Route path="/account" component={UserProfile}/>
         <Route path="/projects/create-survey" exact component={SurveyCreator}/>
         <Route path="/projects" exact component={Project}/>
-        <Route path="/reports/analytics" exact component={SurveyAnalytics} />
-        <Route path="/reports/tabulator" exact component={SurveyAnalyticsTabulator} />
-        <Route path="/reports/tables" exact component={SurveyAnalyticsDatatables} />
+        <Route path="/reports/analytics" exact component={AnalyticsPage} />
+        <Route path="/reports/tabulator" exact component={AnalyticsTabulatorPage} />
         <Route path="/projects/surveys" exact component={Surveys}/>
         <Route path="/projects/create-project" exact component={CreateProject}/>
         <Route path="/edit/:id" component={EditProject}/>
         <Route path="/" component={Overview}/>
-        
         </Switch>
         
         </Router>

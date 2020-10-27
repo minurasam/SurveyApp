@@ -53,7 +53,7 @@ function onComplete(result) {
 export default function SurveyPage() {
     var model = new Survey.Model(json);
     return (
-    <div className="container">
+    <div style={{ paddingLeft:"250px"}} className="container">
         <h2>SurveyJS Library - a sample survey below</h2>
         <Survey.Survey
             model={model}

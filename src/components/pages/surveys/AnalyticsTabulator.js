@@ -1,11 +1,10 @@
 import React from "react";
 import SurveyAnalyticsTabulator from "./SurveyAnalyticsTabulator";
 
-export function AnalyticsTabulatorPage() {
+export default function AnalyticsTabulatorPage() {
   return (
     <div>
-      <h2>Results Table - display survey results in the table form</h2>
-      <span>Uses Tabulator. Supports modern browsers.</span>
+      <h2 style={{ paddingLeft: "260px"}}>Results Table - Survey results in the table form</h2>
       <SurveyAnalyticsTabulator />
     </div>
   );

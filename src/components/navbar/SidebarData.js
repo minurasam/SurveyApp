@@ -70,17 +70,12 @@ export const SidebarData = [
         iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
             {
-                title: 'Table',
-                path: '/reports/tables',
-                icon: <HiIcons.HiDocumentReport />,
-            },
-            {
                 title: 'Analytics',
                 path: '/reports/analytics',
                 icon: <HiIcons.HiDocumentReport />,
             },
             {
-                title: 'Tabulator',
+                title: 'Tabular',
                 path: '/reports/tabulator',
                 icon: <HiIcons.HiDocumentReport />,
             }
