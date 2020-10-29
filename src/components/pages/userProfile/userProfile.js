@@ -18,14 +18,12 @@ class UserProfile extends React.Component {
 
     fetchUserDetails=()=>{
         //console.log(user_id);
-        axios.get("http://localhost:8000/"+this.props.match.params._id)
+        axios.get("http://localhost:8000/"+this.props.match.params.id)
         .then(res=>{
             this.setState({
                 name: res.data.name,
                 username: res.data.username,
-                email: res.data.email,
-                profImage: res.data.profImage
-            
+                email: res.data.email            
             })
         })
         .catch(function (error) {
