@@ -1,4 +1,4 @@
-# React quickstart boilerplate for SurveyJS: Survey Library and Survey Creator 
+# Survey Management System
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
