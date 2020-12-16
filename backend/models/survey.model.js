@@ -1,21 +1,10 @@
 const mongoose = require('mongoose');
 const Project = require('./project.model')
+const Schema = mongoose.Schema
 
 //name, username, email, password, passwordconfirm 
 const surveySchema = new mongoose.Schema({
-    title: 
-    {
-        type: String,
-        required: [true, 'Title is required']
-    },
-
-    surveyInfo: 
-    {
-        type: JSON, 
-        required: true
-    },
-
-    surveyData: 
+    JSONdata: 
     {
         type: JSON, 
         required: true

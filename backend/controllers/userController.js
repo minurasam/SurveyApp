@@ -29,7 +29,7 @@ exports.createUser = (req, res) =>{
 };
 
 exports.updateUser = (req, res) =>{
-    var profilePic= req.file.path;
+    var profilePic = req.file.path;
     User.findById(req.params.id)
         .then(users => {
             users.name = req.body.name;

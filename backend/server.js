@@ -29,11 +29,13 @@ connection.once('open', () => {
 // const exercisesRouter = require('./routes/exercises');
 const userRouter = require('./routes/userRoutes');
 const projectRouter = require('./routes/projectRoutes');
-const private = require('./routes/privateRoutes');
+const privateRouter = require('./routes/privateRoutes');
+const surveyRouter = require('./routes/surveyRoutes');
 
 app.use('/users', userRouter);
 app.use('/projects', projectRouter);
-app.use('/private', private);
+app.use('/private', privateRouter);
+app.use('/surveys', surveyRouter);
 
 // Error Handler (Should be last of middleware)
 app.use(errorHandler);

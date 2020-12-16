@@ -35,16 +35,6 @@ export const SidebarData = [
                 path: '/projects/create-project',
                 icon: <IoIcons.IoIosPaper />,
             },
-            {
-                title: 'My Surveys',
-                path: '/projects/surveys',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Create Survey',
-                path: '/projects/create-survey',
-                icon: <IoIcons.IoIosPaper />,
-            },
         ]
 
     },

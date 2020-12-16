@@ -1,28 +1,42 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { Card, CardText, CardBody, CardTitle } from 'reactstrap'
 
 //functional react component (lack of state and lifecyle methods)
-const Project = props => (
-  <tr>
-    <td>{props.projects.title}</td>
-    <td>{props.projects.description}</td>
-    <td>{props.projects.startDate.substring(0,10)}</td>
-    <td>{props.projects.endDate.substring(0,10)}</td>
-    <td>
-    <button className="btn btn-primary">
-          View 
-      </button> ||
-      <button className="btn btn-warning">
-          <Link to={"/edit/"+props.projects._id}>Edit</Link> 
-      </button> ||
-      <button className="btn btn-danger">  
-        <a href="#" onClick={() => { props.deleteProject(props.projects._id) }}>
-          Delete
-          </a>
-      </button> 
-    </td>
-  </tr>
+const Project = (props) => (
+  <div className="col-12 col-md-5 m-1">
+  <Card>
+    <CardBody>
+    
+      <CardTitle>
+        <b>{props.projects.title}</b>
+      </CardTitle>
+      <CardText>
+        {props.projects.description}
+      </CardText>
+      <CardText>
+        <b>Start Date:</b> {props.projects.startDate.substring(0,10)}
+      </CardText>
+      <CardText>
+        <b>End Date:</b>{props.projects.endDate.substring(0,10)}
+      </CardText>
+
+        <button className="btn btn-primary">
+            <Link to={"/surveys/"+props.projects._id}><b style={{ color:"black"}}>View</b></Link> 
+        </button> ||
+
+        <button className="btn btn-warning">
+            <Link to={"/edit/"+props.projects._id}><b style={{ color:"black"}}>Edit</b></Link> 
+        </button> ||
+
+        <button className="btn btn-danger">  
+          <a style={{ color:"black"}} href="#" onClick={() => { props.deleteProject(props.projects._id) }}> <b>Delete</b> </a>
+        </button> 
+      
+    </CardBody  >
+  </Card>
+  </div>
 )
 
 //class component 
@@ -63,22 +77,11 @@ export default class Projects extends Component {
 
   render() {
     return (
-      <div className="proj">
-        <h3>Projects</h3>
-        <table className="table">
-          <thead className="thead-light">
-            <tr>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Start Date</th>
-              <th>End Date</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
+      <div className="container">
+        <h3><b>Projects</b></h3>
+          <div className="row">
             { this.projectList() }
-          </tbody>
-        </table>
+          </div>
       </div>
     )
   }
