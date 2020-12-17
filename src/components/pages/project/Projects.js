@@ -23,7 +23,7 @@ const Project = (props) => (
       </CardText>
 
         <button className="btn btn-primary">
-            <Link to={"/surveys/"+props.projects._id}><b style={{ color:"black"}}>View</b></Link> 
+            <Link to={"/projects/surveys/"+props.projects._id}><b style={{ color:"black"}}>View</b></Link> 
         </button> ||
 
         <button className="btn btn-warning">

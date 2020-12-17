@@ -9,6 +9,11 @@ const surveySchema = new mongoose.Schema({
         type: JSON, 
         required: true
     },
+    Info:
+    {
+        type: JSON, 
+        required: true
+    },
 
     projectId:
     {
