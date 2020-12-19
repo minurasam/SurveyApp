@@ -47,7 +47,7 @@ const SidebarWrap = styled.nav`
 
 
 
-const Sidebar = ({}) => {
+const Sidebar = ({ }) => {
     const [Sidebar, setSidebar] = useState(false)
     
     const showSidebar = () => setSidebar(!Sidebar)

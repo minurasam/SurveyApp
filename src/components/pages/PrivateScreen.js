@@ -9,11 +9,11 @@ import EditProject from './project/EditProject';
 import Overview from './Overview'
 import './App.css'; 
 import UserProfile from './userProfile/userProfile'
-import CreateSurvey from './survey_pages/create_survey'
 import SurveyJS from './survey_pages/survey'
 import AnalyticsPage from './surveys/Analytics'
 import AnalyticsTabulatorPage from './surveys/AnalyticsTabulator'
 import SurveyList from './survey_pages/SurveyList'
+import CreateSurvey from './survey_pages/create_survey'
 
 
 export const PrivateScreen = ({ history }) => {
@@ -63,13 +63,13 @@ export const PrivateScreen = ({ history }) => {
         <Switch>        
  
         <Route path="/account" component={UserProfile}/>
-        <Route path="/projects/create-survey" exact component={CreateSurvey}/>
         <Route path="/projects" exact component={Project}/>
         <Route path="/reports/analytics" exact component={AnalyticsPage} />
         <Route path="/reports/tabulator" exact component={AnalyticsTabulatorPage} />
         <Route path="/projects/surveys" exact component={SurveyJS}/>
         <Route path="/projects/create-project" exact component={CreateProject}/>
         <Route path="/edit/:id" component={EditProject}/>
+        <Route path="/projects/surveys/createsurvey" component={CreateSurvey}/>
         <Route path="/projects/surveys/:project_id" component={SurveyList}/>
         <Route path="/" component={Overview}/>
         </Switch>

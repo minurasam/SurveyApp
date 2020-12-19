@@ -79,6 +79,7 @@ export default class Projects extends Component {
     return (
       <div className="container">
         <h3><b>Projects</b></h3>
+        
           <div className="row">
             { this.projectList() }
           </div>

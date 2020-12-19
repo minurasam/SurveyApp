@@ -8,12 +8,14 @@ router.route('/:project_id').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/create/:project_id').post((req, res) => {
+router.route('/create').post((req, res) => {
     const JSONdata = req.body.JSONdata;
-    const projectId = req.params.project_id;
+    const Info = req.body.Info;
+    const projectId = req.body.project_id;
 
     const newSurvey = new Survey({
         JSONdata,
+        Info,
         projectId
     });
 

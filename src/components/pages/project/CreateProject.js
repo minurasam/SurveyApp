@@ -58,7 +58,7 @@ export default class CreateProject extends Component {
       axios.post('http://localhost:8000/projects/add', project)
         .then(res => console.log(res.data));
 
-        window.location = '/';
+        window.location = '/projects';
     }
   
     render() {

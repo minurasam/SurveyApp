@@ -79,7 +79,7 @@ export default class EditProject extends Component {
   render() {
     return (
     <div className="proj">
-      <h3>Edit Exercise Log</h3>
+      <h3>Edit Project</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Title: </label>
