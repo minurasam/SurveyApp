@@ -69,7 +69,7 @@ export const PrivateScreen = ({ history }) => {
         <Route path="/projects/surveys" exact component={SurveyJS}/>
         <Route path="/projects/create-project" exact component={CreateProject}/>
         <Route path="/edit/:id" component={EditProject}/>
-        <Route path="/projects/surveys/createsurvey" component={CreateSurvey}/>
+        <Route path="/projects/surveys/createsurvey/:project_id" component={CreateSurvey}/>
         <Route path="/projects/surveys/:project_id" component={SurveyList}/>
         <Route path="/" component={Overview}/>
         </Switch>

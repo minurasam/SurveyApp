@@ -11,10 +11,11 @@ export default class CreateSurvey extends Component {
 
       this.state = {
         val: '',
-        Jsondata: '',
-        JSONdata: '',
-        Info: '',
-        project_id: ''
+        Jsondata: null,
+        JSONdata: null,
+        Info: null,
+        project_id: this.props.project
+
     }
   }
 
@@ -25,29 +26,28 @@ export default class CreateSurvey extends Component {
   }
 
   onSubmit(e) {
+    axios.get(`https://api.surveyjs.io/private/Surveys/getSurveyInfo?accessKey=7a37d983080e4485b1fdddc582f7fae9&surveyId=${this.state.val}`)
+    .then(response => response.data)
+    .then(data => {
+      this.setState({ Jsondata: data });
+  })
+  if(this.state.Jsondata != null){
     e.preventDefault();
-    axios.get('https://api.surveyjs.io/private/Surveys/getSurveyInfo?accessKey=7a37d983080e4485b1fdddc582f7fae9&surveyId='+this.state.val)
-        .then(response => {
-          this.setState({
-            Jsondata: response.data
-          }) 
-        })
-        .catch(function (error) {
-          console.log(error);
-        })
-        
-    const survey = {
-      JSONdata: this.state.Jsondata['Json'],
-      Info: this.state.Jsondata['Info'],
-      project_id: "609d6e82241cfe28d879b834"
-    }
-
+      const survey = {
+        JSONdata: this.state.Jsondata.Json,
+        Info: this.state.Jsondata.Info,
+        project_id: this.state.project_id
+      } 
     console.log(survey);
 
     axios.post('http://localhost:8000/surveys/create', survey)
       .then(res => console.log(res.data));
 
       window.location = '/projects';
+    }
+    else {
+      console.log("not working");
+    }
   }
     render() {
       return (

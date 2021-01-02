@@ -3,7 +3,7 @@ let Survey = require('../models/survey.model');
 
 
 router.route('/:project_id').get((req, res) => {
-    Survey.findById(req.params.project_id)
+    Survey.find({projectId: req.params.project_id})
         .then(surveys => res.json(surveys))
         .catch(err => res.status(400).json('Error: ' + err));
 });
