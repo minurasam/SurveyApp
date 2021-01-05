@@ -54,7 +54,6 @@ const Sidebar = ({}) => {
     
     
     return (
-        <>
         <IconContext.Provider value={{ color: 'light blue'}}>
         <Nav>
             <NavIcon to="#" style={{position:'absolute'}}>
@@ -79,7 +78,6 @@ const Sidebar = ({}) => {
             </SidebarWrap>
         </SidebarNav>
         </IconContext.Provider>
-        </>
     )
 }
 

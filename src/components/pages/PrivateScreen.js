@@ -11,6 +11,7 @@ import EditProject from './project/EditProject';
 import Overview from './Overview'
 import './App.css'; 
 import UserProfile from './userProfile/userProfile'
+import App from './surveys/App'
 
 
 export const PrivateScreen = ({ history }) => {
@@ -51,27 +52,25 @@ export const PrivateScreen = ({ history }) => {
   return error ? (
     <span className="error-message">{error}</span>
   ) : (
-    <>
-      
       <Router>
         <div style={{ display:"flex", flexDirection: "column"}}>
           <Sidebar />  
           <button style={{ color:"white", alignItems: "center", marginLeft: "auto", backgroundColor: "Green", padding: "5px 5px 5px 5px"}} className="logout-btn" onClick={logoutHandler}>Logout</button>
+          <div style={{ background: "green", color: "white" }}>{privateData}</div>  
         </div>
         <Switch>        
-        <Route path="/reports" exact component={Reports}/>
+ 
         <Route path="/account" component={UserProfile}/>
         <Route path="/projects" exact component={Project}/>
         <Route path="/projects/create-project" exact component={CreateProject}/>
         <Route path="/edit/:id" component={EditProject}/>
         <Route path="/" component={Overview}/>
+        <Route path="/reports" exact component={App}/>
         
         </Switch>
+        
         </Router>
-      <div style={{ background: "green", color: "white" }}>{privateData}</div>
       
-      
-    </>
   );
 };
 
