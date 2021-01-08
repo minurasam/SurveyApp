@@ -11,43 +11,60 @@ export default class CreateSurvey extends Component {
 
       this.state = {
         val: '',
-        Jsondata: null,
-        JSONdata: null,
-        Info: null,
-        project_id: this.props.project
+        Jsondata: "",
+        JSONdata: "",
+        Info: "",
+        project_id: this.props.match.params.project_id
 
     }
   }
 
-  onChangeId(e) {
+  async onChangeId(e) {
     this.setState({
       val: e.target.value
     })
+    this.asyncCall();
   }
 
-  onSubmit(e) {
-    axios.get(`https://api.surveyjs.io/private/Surveys/getSurveyInfo?accessKey=7a37d983080e4485b1fdddc582f7fae9&surveyId=${this.state.val}`)
+  resolveAfter2Seconds() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('resolved');
+      }, 20);
+    });
+  }
+  
+  async asyncCall() {
+    console.log('calling');
+    const result = await this.resolveAfter2Seconds();
+    await axios.get(`https://api.surveyjs.io/private/Surveys/getSurveyInfo?accessKey=7a37d983080e4485b1fdddc582f7fae9&surveyId=${this.state.val}`)
     .then(response => response.data)
     .then(data => {
       this.setState({ Jsondata: data });
+  }).catch(function (error) {
+    console.log(error);
   })
-  if(this.state.Jsondata != null){
-    e.preventDefault();
-      const survey = {
-        JSONdata: this.state.Jsondata.Json,
-        Info: this.state.Jsondata.Info,
+    console.log(result);
+    // expected output: "resolved"
+  }
+
+
+  onSubmit(e) {
+      e.preventDefault();
+      const survey = { 
+        JSONdata: this.state.Jsondata['Json'],
+        Info: this.state.Jsondata['Info'],
         project_id: this.state.project_id
       } 
     console.log(survey);
 
-    axios.post('http://localhost:8000/surveys/create', survey)
-      .then(res => console.log(res.data));
+      axios.post('http://localhost:8000/surveys/create', survey)
+        .then(res => console.log(res.data))
+        .catch(function (error) {
+          console.log(error);
+        })
 
-      window.location = '/projects';
-    }
-    else {
-      console.log("not working");
-    }
+        window.location = `/projects/surveys/${this.state.project_id}`;
   }
     render() {
       return (

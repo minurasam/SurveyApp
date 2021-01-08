@@ -8,6 +8,12 @@ router.route('/:project_id').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/runsurvey/:id').get((req, res) => {
+    Survey.findById(req.params.id)
+        .then(survey => res.json(survey))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
 router.route('/create').post((req, res) => {
     const JSONdata = req.body.JSONdata;
     const Info = req.body.Info;

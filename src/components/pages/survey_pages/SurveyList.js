@@ -19,7 +19,7 @@ const Survey = (props) => (
         </CardText>
   
           <button className="btn btn-primary">
-              <Link to={"#"}><b style={{ color:"black"}}>Run Survey</b></Link> 
+              <Link to={"/projects/surveys/runsurvey/"+props.survey.Info['Id']}><b style={{ color:"black"}}>Run Survey</b></Link> 
           </button> ||
   
           <button className="btn btn-warning">
@@ -41,7 +41,6 @@ export default class SurveyList extends Component {
     super(props);
 
     this.state = {
-        title: '',
         projects: [],
         surveys: []
     }
@@ -68,7 +67,7 @@ export default class SurveyList extends Component {
     
     surveyList() {
       return this.state.surveys.map(currentsurvey => {
-        return <Survey survey={currentsurvey} />;
+        return <Survey survey={currentsurvey} key={currentsurvey._id}/>;
       })
     }
 
@@ -76,7 +75,7 @@ export default class SurveyList extends Component {
   render() {
     return (
       <div className="container">
-        <h3><b><b>Survey List of Project {this.state.title}</b></b></h3>
+        <h3><b><b>Survey List of Project {this.state.projects.title}</b></b></h3>
         <button className="btn btn-danger">  
             <Link to={"/projects/surveys/createsurvey/"+this.props.match.params.project_id}><b style={{ color:"black"}}>Create Survey</b></Link> 
           </button> 
