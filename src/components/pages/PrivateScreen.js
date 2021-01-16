@@ -14,7 +14,7 @@ import AnalyticsPage from './surveys/Analytics'
 import AnalyticsTabulatorPage from './surveys/AnalyticsTabulator'
 import SurveyList from './survey_pages/SurveyList'
 import CreateSurvey from './survey_pages/create_survey'
-import SurveyDone from "./survey_pages/SurveyDone";
+import SurveyResult from './survey_pages/surveyResult'
 
 
 export const PrivateScreen = ({ history }) => {
@@ -72,7 +72,7 @@ export const PrivateScreen = ({ history }) => {
         <Route path="/edit/:id" component={EditProject}/>
         <Route path="/projects/surveys/createsurvey/:project_id" component={CreateSurvey}/>
         <Route path="/projects/surveys/:project_id" component={SurveyList}/>
-        <Route path="/surveysdone" component={SurveyDone}/>
+        <Route path="/results" component={SurveyResult}/>
         <Route path="/" component={Overview}/>
         </Switch>
         

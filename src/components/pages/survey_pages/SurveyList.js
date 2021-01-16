@@ -19,7 +19,10 @@ const Survey = (props) => (
         </CardText>
   
           <button className="btn btn-primary">
-              <Link to={"/projects/surveys/runsurvey/"+props.survey.Info['Id']}><b style={{ color:"black"}}>Run Survey</b></Link> 
+              <Link to={{
+                pathname:"/projects/surveys/runsurvey/"+props.survey.Info['Id'],
+                survInfo: props.survey.Info
+                }} ><b style={{ color:"black"}}>Run Survey</b></Link> 
           </button> ||
   
           <button className="btn btn-warning">
