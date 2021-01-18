@@ -1,0 +1,36 @@
+version: "3"
+services:
+  react-app:
+    image: react-app
+    build: ./client/
+    stdin_open: true
+    ports: 
+      - "3000:3000"
+    networks: 
+      - mern-app
+
+
+  api-server:
+    image: api-server
+    build: ./backend/
+    ports:  
+      - "8000:8000"
+    networks: 
+      - mern-app
+    depends_on: mongo
+
+  SurveyDB:
+    image: mongo:4.4-bionic
+    ports: 
+      - "8000:8000"
+    networks: 
+      -mern-app
+    volumes: 
+      - mongo-data:/data/db
+
+networks: 
+  mern-app:
+    driver: bridge
+volumes: 
+  mongo-data:
+    driver: local
