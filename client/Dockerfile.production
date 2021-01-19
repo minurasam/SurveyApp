@@ -1,7 +1,7 @@
 # Dockerfile for React client
 
 # Build react client
-FROM node:14-slim
+FROM node:14-slim AS builder
 
 # Working directory be app
 WORKDIR /usr/src/app
@@ -9,18 +9,25 @@ WORKDIR /usr/src/app
 COPY ./package.json ./
 COPY ./package-lock.json ./
 
-COPY . .
 ###  Installing dependencies
-
 RUN npm install --silent
 
 # copy local files to app folder
 COPY . .
 
-EXPOSE 3000
+ARG BASE_URL
+ENV ATLAS_URI=${uri}
 
-ENV ATLAS_URI=http://localhost:8000/
+RUN npm build
 
+## second stage
+FROM caddy:2.4.3-alpine
 
-CMD ["npm","start"]
+ARG CADDYFILE
+COPY ${CADDYFILE} /etc/caddy/Caddyfile
 
+COPY --from=builder /usr/src/app/build /srv
+
+EXPOSE 80
+
+EXPOSE 443

@@ -8,6 +8,9 @@ services:
       - "3000:3000"
     networks: 
       - mern-app
+    volumes: 
+      - ./client/:/usr/src/app
+      - /usr/src/app/node_modules
 
 
   api-server:
@@ -17,6 +20,9 @@ services:
       - "8000:8000"
     networks: 
       - mern-app
+    volumes: 
+      - ./backend/:/usr/src/app
+      - /usr/src/app/node_modules
     depends_on: mongo
 
   SurveyDB:
