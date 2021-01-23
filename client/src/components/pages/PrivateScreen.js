@@ -15,6 +15,7 @@ import AnalyticsTabulatorPage from './surveys/AnalyticsTabulator'
 import SurveyList from './survey_pages/SurveyList'
 import CreateSurvey from './survey_pages/create_survey'
 import SurveyResult from './survey_pages/surveyResult'
+import StickyFooter from '../Footer'
 
 
 export const PrivateScreen = ({ history }) => {
@@ -75,7 +76,9 @@ export const PrivateScreen = ({ history }) => {
         <Route path="/results" component={SurveyResult}/>
         <Route path="/" component={Overview}/>
         </Switch>
-        
+        <div>
+          <StickyFooter/>
+        </div>
         </Router>
       
   );
