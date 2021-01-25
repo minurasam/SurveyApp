@@ -1,0 +1,287 @@
+commit f718659de7ca0f484682d51d05eb6fc540198024
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sat Jan 23 19:06:19 2021 +0530
+
+    Footer Component Added
+
+commit 680a77b494014bf687c24654cfd1fdb16020dc56
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Thu Jan 21 11:51:09 2021 +0530
+
+    aws pem added
+
+commit 75f14d750a25a4fc7e0ef2dcddddf26259099ccf
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Jan 20 02:30:09 2021 +0530
+
+    Docker containerized
+
+commit 023cd84a87426d08bd7d04f69c889183bffbb9b3
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Tue Jan 19 00:19:57 2021 +0530
+
+    files changed Docker image created
+
+commit 34af8ffd457845eab18dac0e0744adc1a8565744
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sat Jan 16 19:17:49 2021 +0530
+
+    Results
+
+commit 6730b774e1a26335c2d7fe590446bd1a005111e6
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sat Jan 9 01:36:13 2021 +0530
+
+    Survey Render
+
+commit 69fb49e6e58245365c117cb32b7c82f0cc85a264
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sun Jan 3 00:02:12 2021 +0530
+
+    changed to API1
+
+commit beb57d115cfb3090c045bb6813081c2d848db4c4
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sun Dec 20 01:49:20 2020 +0530
+
+    Creating Survey API configured
+
+commit ba919f047e9129bf702c46c96482714dc4d6d95a
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Thu Dec 17 13:25:33 2020 +0530
+
+    API reconfigured
+
+commit 4efe609a016c96144e1ff0f027e4443d469bdd76
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Dec 16 17:41:02 2020 +0530
+
+    added survey api
+
+commit ea7fb21c16e3cb92149eaf11837d9451a3cc407a
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Tue Nov 17 17:18:12 2020 +0530
+
+    Updated survey data
+
+commit b6f4bb0310c83f29dae42ef54cd0a61e5ad0ff89
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Jun 17 17:15:23 2020 +0530
+
+    Frontend Edited and survey model edited
+
+commit fb02ad1aad3c3f69ea2a1e0b2e99f62be3d9e3eb
+Author: Minura Samaranayake <44613339+minurasam@users.noreply.github.com>
+Date:   Sat Jun 19 17:05:25 2021 +0530
+
+    Delete surveyController.js
+
+commit 5f69cf55309a6ffe6d7a19afedacf00f5da3c133
+Author: Minura Samaranayake <44613339+minurasam@users.noreply.github.com>
+Date:   Sat Jun 19 17:05:05 2021 +0530
+
+    Delete survey.model.js
+
+commit 17a0c89eb16e106b15023db2b557271caf53ebbb
+Author: Minura Samaranayake <44613339+minurasam@users.noreply.github.com>
+Date:   Sat Jun 19 17:04:44 2021 +0530
+
+    Delete index.html
+
+commit a639107a8ecf48d1674d7776a61a030eeb05381c
+Author: Minura Samaranayake <44613339+minurasam@users.noreply.github.com>
+Date:   Sat Jun 19 17:04:30 2021 +0530
+
+    Delete index.js
+
+commit 3357b2a686b64e315c9fc693be2680a7162851f8
+Author: Minura Samaranayake <44613339+minurasam@users.noreply.github.com>
+Date:   Sat Jun 19 17:04:15 2021 +0530
+
+    Delete Footer.js
+
+commit 1d5af0d04e8ca49cd2e18ccbde40a6581cc22736
+Author: Minura Samaranayake <44613339+minurasam@users.noreply.github.com>
+Date:   Sat Jun 19 17:03:57 2021 +0530
+
+    Delete PrivateScreen.js
+
+commit a5b5ac4877bcd490e2968f6a57266272b9bd0cf1
+Author: Minura Samaranayake <44613339+minurasam@users.noreply.github.com>
+Date:   Sat Jun 19 17:03:47 2021 +0530
+
+    Delete survey.js
+
+commit 64c4667c28c46e6a5726d7d8d0ad4c5b2228f66f
+Author: Minura Samaranayake <44613339+minurasam@users.noreply.github.com>
+Date:   Sat Jun 19 17:03:35 2021 +0530
+
+    Delete create_survey.js
+
+commit 202be0d4584acbbd865ed1566b7a8951db4dd3ad
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Nov 17 17:00:57 2021 +0530
+
+    Survey Model and frontend edited
+
+commit 09ccd3e5e61b2f77af4fd1740503755cd175bc0c
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Fri Oct 30 13:21:24 2020 +0530
+
+    Update README.md
+
+commit d72b55a71f412839153937d644633d02823476be
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Thu Oct 29 11:58:14 2020 +0530
+
+    Edits in routes
+
+commit e29c993d06e41652c3367839fa86f4d447e843f7
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Oct 28 01:14:32 2020 +0530
+
+    edits
+
+commit 8096b0d9cccc1ff37e7670bb50527c5393abbe89
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sun Oct 25 20:56:18 2020 +0530
+
+    Routes added
+
+commit 269f0ca0f22faa805a33bb511cd0ca62c5d423fc
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Fri Oct 23 21:29:08 2020 +0530
+
+    Survey Creator Configured
+
+commit 326b0486c1b8cfcc6b329dc6f70bc4ba71fcedbd
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Oct 21 18:13:14 2020 +0530
+
+    Suvey Model Created
+
+commit 46f4233747697259fb6ed33b4daa60383f2af546
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Jan 6 03:51:28 2021 +0530
+
+    Surveys creator added
+
+commit e0dd708ec7ff8327474bcd5ab14828df075788af
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Tue Sep 29 22:44:44 2020 +0530
+
+    new com
+
+commit 694f0992623039ba96e3a0d9d0555ae4a906f70f
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sun Sep 27 18:55:11 2020 +0530
+
+    Backend adjustments
+
+commit 916a4acc9255844adab01b73c1a55d3b75465585
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sat Sep 26 11:17:34 2020 +0530
+
+    Update README.md
+
+commit 4fd148ec963b33621ee1d51edead493ef72a5849
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Fri Sep 25 11:09:43 2020 +0530
+
+    Authentication login logout complete
+
+commit 49de3f981f7075295a1564227d9f00e9165b778e
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Sep 23 02:54:58 2020 +0530
+
+    Backend Reset Password Done
+
+commit bca8041e9265acb1564f41df69e6f69f143536de
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Sep 23 08:50:22 2020 +0530
+
+    JWT added
+
+commit 5673fa17bc106f5b0c2af59e34d941c6657dbb97
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Tue Sep 22 23:11:59 2020 +0530
+
+    User Signup/login Authentication
+
+commit 7fa209f0bdd2034dbef4b191de9551e93bde66ac
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Mon Sep 21 02:04:19 2020 +0530
+
+    Signup done
+
+commit 03dc7c999a4893ad9dae729e2e291cd87177ed70
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Mon Sep 21 01:58:31 2020 +0530
+
+    SIgnup Done
+
+commit 31a7b2ea79b84448e485cc22ac0f179d2ca3d20f
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sun Sep 20 20:11:28 2020 +0530
+
+    Added frontend functions
+
+commit 29df20a84db42d78e117e3d4a2080e7710ba5800
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sat Sep 19 01:49:08 2020 +0530
+
+    Backend added
+
+commit fcd46978693473b9bcd5c3fb0faa5acba91a3e36
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Tue Mar 16 00:13:36 2021 +0530
+
+    git
+
+commit b9e452ba443fdad1379dcecb9a1946ed4d226d40
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Wed Oct 14 00:08:59 2020 +0530
+
+    Added Sidebar and login SignUp Forms
+
+commit d594e04478ad808d5098bd17f1c36ff1e460bcab
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Sat Oct 10 02:18:55 2020 +0530
+
+    Navbar Created
+
+commit 9c12325b59fa10a8b30d6d20a9626b1b199b608f
+Author: minurasam123 <44613339+minurasam123@users.noreply.github.com>
+Date:   Mon Sep 28 22:03:26 2020 +0530
+
+    Update README.md
+
+commit e569573fa4d94d1ca31f01c37c6cdaafdc7866dd
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Mon Sep 7 21:03:16 2020 +0530
+
+    Created Dashboard
+
+commit 2a97e1ce8fe0539b4f81fff79ce8d838c6f364d6
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Mon Sep 28 08:56:02 2020 +0530
+
+    added Signin page
+
+commit e44d815254bff5d32f486345619260d9cc611264
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Tue Sep 1 11:52:03 2020 +0530
+
+    added Navbar
+
+commit af7c4db38c24b3f5d449a123b35cecc1ca17a3a7
+Author: minna123-cap <minura.samaranayake@gmail.com>
+Date:   Tue Jun 30 00:25:40 2020 +0530
+
+    added react app
+
+commit 950dbe9754c6337d3cf1e20b393df62d286088f6
+Author: minurasam123 <44613339+minurasam123@users.noreply.github.com>
+Date:   Thu Sep 17 21:11:10 2020 +0530
+
+    Initial commit

@@ -78,7 +78,7 @@ export default class SurveyList extends Component {
   render() {
     return (
       <div className="container">
-        <h3><b><b>Survey List of Project {this.state.projects.title}</b></b></h3>
+        <h3><b><b>Survey List of {this.state.projects.title}</b></b></h3>
         <button className="btn btn-danger">  
             <Link to={"/projects/surveys/createsurvey/"+this.props.match.params.project_id}><b style={{ color:"black"}}>Create Survey</b></Link> 
           </button> 

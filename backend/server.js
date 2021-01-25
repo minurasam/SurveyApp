@@ -25,6 +25,17 @@ connection.once('open', () => {
     console.log("MongoDB Database Connection is Established Succesfully!");
 })
 
+
+
+app.listen(port, () => {
+    console.log(`Server is running in port: ${port}`);
+});
+
+process.on("unhandledRejection", (err, promise) => {
+    console.log(`Logged Error: $(err)`);
+    server.close(() => process.exit(1));
+});
+
 //api endpoints 
 // const exercisesRouter = require('./routes/exercises');
 const userRouter = require('./routes/userRoutes');
@@ -39,17 +50,5 @@ app.use('/surveys', surveyRouter);
 
 // Error Handler (Should be last of middleware)
 app.use(errorHandler);
-
-
-
-app.listen(port, () => {
-    console.log(`Server is running in port: ${port}`);
-});
-
-process.on("unhandledRejection", (err, promise) => {
-    console.log(`Logged Error: $(err)`);
-    server.close(() => process.exit(1));
-});
-
 
 module.exports = app;
