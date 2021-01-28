@@ -16,7 +16,7 @@ RUN npm install --silent
 COPY . .
 
 ARG BASE_URL
-ENV ATLAS_URI=${uri}
+ENV ATLAS_URI=${BASE_URL}
 
 RUN npm build
 

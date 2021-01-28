@@ -8,6 +8,9 @@ services:
       - "443:443"
     networks: 
       - mern-app
+    volumes: 
+      - "caddy-data:/data"
+      - caddy-config:/config
 
   api-server:
     image: api-server-ptoduction

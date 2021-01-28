@@ -6,10 +6,10 @@ COPY ./package.json ./
 COPY ./package-lock.json ./
 
 
-RUN npm install
+RUN yarn install
 
 COPY . .
 
 EXPOSE 8000
 
-CMD [ "npm", "run server" ]
+CMD [ "yarn", "start" ]

@@ -13,4 +13,4 @@ build-production:
 	-t react-app-production:production \
 	--build-arg CADDYFILE=Caddyfile.production \
 	--build-arg BASE_URL=https://mern.mysurveyappwebsite.com/ \
-	-f Dockerfile.production .
+	-f Dockerfile.production . 
