@@ -1,3 +1,3 @@
 build:
-	docker build -t api-server .
+	docker build -t backend .
 	

@@ -19,7 +19,7 @@ COPY . .
 
 EXPOSE 3000
 
-ENV ATLAS_URI=http://localhost:8000/
+ENV URI=http://localhost:8000/
 
 
 CMD ["npm","start"]
