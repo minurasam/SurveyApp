@@ -1,0 +1,36 @@
+version: "3.3"
+services:
+  nginx:
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports: 
+      - "80:80"
+
+  react-app:
+    image: react-app-production:${ENV}
+    restart: unless-stopped
+    ports: 
+      - "80:80"
+      - "443:443"
+    networks: 
+      - mern-app
+    volumes: 
+      - "caddy-data:/data"
+      - caddy-config:/config
+
+  api-server:
+    image: api-server-ptoduction
+    restart: unless-stopped
+    env_file: ./backend/config/${ENV}.env
+    ports:  
+      - "8000:8000"
+    networks: 
+      - mern-app
+
+networks: 
+  mern-app:
+    driver: bridge
+volumes: 
+  mongo-data:
+    driver: local
