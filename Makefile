@@ -1,11 +1,3 @@
-build-dev:
-	cd client && $(MAKE) build-dev
-	cd backend && $(MAKE) build
-
-run-dev: 
-	docker-compose -f docker-compose-dev.yml up
-
-
 build-local:
 	cd client && $(MAKE) build-local
 	cd backend && $(MAKE) build
