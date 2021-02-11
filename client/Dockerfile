@@ -12,12 +12,12 @@ COPY ./yarn.lock ./
 COPY . .
 ###  Installing dependencies
 
-RUN npm install --silent
+RUN yarn install 
 
 # copy local files to app folder
 COPY . .
 
 EXPOSE 3000
 
-CMD ["npm","start"]
+CMD ["yarn","start"]
 

@@ -10,7 +10,7 @@ COPY ./package.json ./
 COPY ./package-lock.json ./
 
 ###  Installing dependencies
-RUN npm install --silent
+RUN yarn install --silent
 
 # copy local files to app folder
 COPY . .
@@ -18,7 +18,7 @@ COPY . .
 ARG BASE_URL
 ENV ATLAS_URI=${BASE_URL}
 
-RUN npm build
+RUN yarn build
 
 ## second stage
 FROM caddy:2.4.3-alpine
