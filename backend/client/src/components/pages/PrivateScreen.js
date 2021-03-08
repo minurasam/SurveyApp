@@ -15,7 +15,7 @@ import AnalyticsTabulatorPage from './surveys/AnalyticsTabulator'
 import SurveyList from './survey_pages/SurveyList'
 import CreateSurvey from './survey_pages/create_survey'
 import SurveyResult from './survey_pages/surveyResult'
-
+import CacheRoute, { CacheSwitch } from 'react-router-cache-route'
 
 export const PrivateScreen = ({ history }) => {
   const [error] = useState("");
@@ -61,19 +61,19 @@ export const PrivateScreen = ({ history }) => {
           <button style={{ color:"white", alignItems: "center", marginLeft: "auto", backgroundColor: "Green", padding: "5px 5px 5px 5px"}} className="logout-btn" onClick={logoutHandler}>Logout</button>
           <div style={{ background: "green", color: "white" }}>{privateData}</div>  
         </div>
-        <Switch>        
+        <CacheSwitch>        
  
-        <Route path="/account" component={UserProfile}/>
-        <Route path="/projects" exact component={Project}/>
-        <Route path="/reports/analytics" exact component={AnalyticsPage} />
-        <Route path="/reports/tabulator" exact component={AnalyticsTabulatorPage} />
-        <Route path="/projects/surveys/runsurvey/:survey_id" exact component={SurveyJS}/>
-        <Route path="/projects/create-project" exact component={CreateProject}/>
-        <Route path="/edit/:id" component={EditProject}/>
-        <Route path="/projects/surveys/createsurvey/:project_id" component={CreateSurvey}/>
-        <Route path="/projects/surveys/:project_id" component={SurveyList}/>
-        <Route path="/" component={Overview}/>
-        </Switch>
+          <Route path="/account" component={UserProfile}/>
+          <Route path="/projects" exact component={Project}/>
+          <Route path="/reports/analytics" exact component={AnalyticsPage} />
+          <Route path="/reports/tabulator" exact component={AnalyticsTabulatorPage} />
+          <Route path="/projects/surveys/runsurvey/:survey_id" exact component={SurveyJS}/>
+          <Route path="/projects/create-project" exact component={CreateProject}/>
+          <Route path="/edit/:id" component={EditProject}/>
+          <Route path="/projects/surveys/createsurvey/:project_id" component={CreateSurvey}/>
+          <Route path="/projects/surveys/:project_id" component={SurveyList}/>
+          <Route path="/" component={Overview}/>
+        </CacheSwitch>
         </Router>
       
   );
