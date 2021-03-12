@@ -15,7 +15,9 @@ import AnalyticsTabulatorPage from './surveys/AnalyticsTabulator'
 import SurveyList from './survey_pages/SurveyList'
 import CreateSurvey from './survey_pages/create_survey'
 import SurveyResult from './survey_pages/surveyResult'
+import { Provider } from 'react-redux'
 import CacheRoute, { CacheSwitch } from 'react-router-cache-route'
+import Dashboard from "./Dashboard/Dashboard";
 
 export const PrivateScreen = ({ history }) => {
   const [error] = useState("");
@@ -54,7 +56,7 @@ export const PrivateScreen = ({ history }) => {
 
   return error ? (
     <span className="error-message">{error}</span>
-  ) : (
+  ) : (     
       <Router>
         <div style={{ display:"flex", flexDirection: "column"}}>
           <Sidebar />  
@@ -62,20 +64,19 @@ export const PrivateScreen = ({ history }) => {
           <div style={{ background: "green", color: "white" }}>{privateData}</div>  
         </div>
         <CacheSwitch>        
- 
-          <Route path="/account" component={UserProfile}/>
-          <Route path="/projects" exact component={Project}/>
-          <Route path="/reports/analytics" exact component={AnalyticsPage} />
-          <Route path="/reports/tabulator" exact component={AnalyticsTabulatorPage} />
-          <Route path="/projects/surveys/runsurvey/:survey_id" exact component={SurveyJS}/>
-          <Route path="/projects/create-project" exact component={CreateProject}/>
-          <Route path="/edit/:id" component={EditProject}/>
-          <Route path="/projects/surveys/createsurvey/:project_id" component={CreateSurvey}/>
-          <Route path="/projects/surveys/:project_id" component={SurveyList}/>
-          <Route path="/" component={Overview}/>
+         <CacheRoute path="/dashboard" component={Dashboard}/>
+          <CacheRoute path="/account" component={UserProfile}/>
+          <CacheRoute path="/projects" exact component={Project}/>
+          <CacheRoute path="/reports/analytics" exact component={AnalyticsPage} />
+          <CacheRoute path="/reports/tabulator" exact component={AnalyticsTabulatorPage} />
+          <CacheRoute path="/projects/surveys/runsurvey/:survey_id" exact component={SurveyJS}/>
+          <CacheRoute path="/projects/create-project" exact component={CreateProject}/>
+          <CacheRoute path="/edit/:id" component={EditProject}/>
+          <CacheRoute path="/projects/surveys/createsurvey/:project_id" component={CreateSurvey}/>
+          <CacheRoute path="/projects/surveys/:project_id" component={SurveyList}/>
+          <CacheRoute path="/" component={Overview}/>
         </CacheSwitch>
-        </Router>
-      
+        </Router>      
   );
 };
 
