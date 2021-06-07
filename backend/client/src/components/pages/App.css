@@ -16,6 +16,9 @@
   justify-content: center;
   font-size: 3rem;
 }
+.container {
+  padding-left: 270px;
+}
 .proj {
   padding-left: 270px;
   padding-right: 10px;
@@ -35,5 +38,5 @@
   
 }
 .dashboard {
-  padding-left: 250px;
+  padding-left: 150px;
 }

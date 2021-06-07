@@ -15,23 +15,22 @@ import {
 
 
 
-const Cards = () => (
+const DashCards = () => (
     <>
     <Container fluid>
         <Row>
-          <Col lg="3" sm="6">
+          <Col >
             <Card className="card-stats">
               <Card.Body>
                 <Row>
-                  <Col xs="5">
-                    <div className="icon-big text-center icon-warning">
-                      <i className="nc-icon nc-chart text-warning"></i>
+                  <Col xs="8">
+                    <div className="numbers" >
+                      <p className="card-category"><h2 style={{ color:"blue"}}><b>Number of Surveys</b></h2></p>
                     </div>
                   </Col>
-                  <Col xs="7">
-                    <div className="numbers">
-                      <p className="card-category">Number</p>
-                      <Card.Title as="h4">150GB</Card.Title>
+                  <Col xs="4">
+                    <div className="numbers" >
+                      <Card.Title as="h4"><h2 style={{ color:"red"}}>150</h2></Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -49,15 +48,14 @@ const Cards = () => (
             <Card className="card-stats">
               <Card.Body>
                 <Row>
-                  <Col xs="5">
-                    <div className="icon-big text-center icon-warning">
-                      <i className="nc-icon nc-light-3 text-success"></i>
+                  <Col xs="8">
+                  <div className="numbers" >
+                      <p className="card-category"><h2 style={{ color:"blue"}}><b>Number of Members</b></h2></p>
                     </div>
                   </Col>
-                  <Col xs="7">
-                    <div className="numbers">
-                      <p className="card-category">Revenue</p>
-                      <Card.Title as="h4">$ 1,345</Card.Title>
+                  <Col xs="4">
+                    <div className="numbers" >
+                      <Card.Title as="h4"><h2 style={{ color:"red"}}>34</h2></Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -66,24 +64,23 @@ const Cards = () => (
                 <hr></hr>
                 <div className="stats">
                   <i className="far fa-calendar-alt mr-1"></i>
-                  Last day
+                 Updated Yesterday
                 </div>
               </Card.Footer>
             </Card>
           </Col>
-          <Col lg="3" sm="6">
+          <Col>
             <Card className="card-stats">
               <Card.Body>
                 <Row>
-                  <Col xs="5">
-                    <div className="icon-big text-center icon-warning">
-                      <i className="nc-icon nc-vector text-danger"></i>
+                  <Col xs="8">
+                  <div className="numbers" >
+                      <p className="card-category"><h2 style={{ color:"blue"}}><b>No of Projects</b></h2></p>
                     </div>
                   </Col>
-                  <Col xs="7">
-                    <div className="numbers">
-                      <p className="card-category">Errors</p>
-                      <Card.Title as="h4">23</Card.Title>
+                  <Col xs="4">
+                    <div className="numbers" >
+                      <Card.Title as="h4"><h2 style={{ color:"red"}}>12</h2></Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -92,7 +89,7 @@ const Cards = () => (
                 <hr></hr>
                 <div className="stats">
                   <i className="far fa-clock-o mr-1"></i>
-                  In the last hour
+                  In the last 6 hour
                 </div>
               </Card.Footer>
             </Card>
@@ -101,15 +98,14 @@ const Cards = () => (
             <Card className="card-stats">
               <Card.Body>
                 <Row>
-                  <Col xs="5">
-                    <div className="icon-big text-center icon-warning">
-                      <i className="nc-icon nc-favourite-28 text-primary"></i>
+                <Col xs="8">
+                  <div className="numbers" >
+                      <p className="card-category"><h2 style={{ color:"blue"}}><b>No of Responses</b></h2></p>
                     </div>
                   </Col>
-                  <Col xs="7">
-                    <div className="numbers">
-                      <p className="card-category">Followers</p>
-                      <Card.Title as="h4">+45K</Card.Title>
+                  <Col xs="4">
+                    <div className="numbers" >
+                      <Card.Title as="h4"><h2 style={{ color:"red"}}>122</h2></Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -118,17 +114,18 @@ const Cards = () => (
                 <hr></hr>
                 <div className="stats">
                   <i className="fas fa-redo mr-1"></i>
-                  Update now
+                  Up to Date
                 </div>
               </Card.Footer>
             </Card>
           </Col>
         </Row>
+        <br></br>
         <Row>
           <Col md="8">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Users Behavior</Card.Title>
+                <Card.Title as="h3">Users Response Pattern</Card.Title>
                 <p className="card-category">24 Hours performance</p>
               </Card.Header>
               <Card.Body>
@@ -184,13 +181,6 @@ const Cards = () => (
                 </div>
               </Card.Body>
               <Card.Footer>
-                <div className="legend">
-                  <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Click <i className="fas fa-circle text-warning"></i>
-                  Click Second Time
-                </div>
-                <hr></hr>
                 <div className="stats">
                   <i className="fas fa-history"></i>
                   Updated 3 minutes ago
@@ -201,15 +191,15 @@ const Cards = () => (
           <Col md="4">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Email Statistics</Card.Title>
-                <p className="card-category">Last Campaign Performance</p>
+                <Card.Title as="h4">Response Statistics</Card.Title>
+                <p className="card-category">Last Project Performance</p>
               </Card.Header>
               <Card.Body>
                 <div
                   className="ct-chart ct-perfect-fourth"
                   id="chartPreferences"
                 >
-                  <ChartistGraph
+                  <ChartistGraph 
                     data={{
                       labels: ["40%", "20%", "40%"],
                       series: [40, 20, 40],
@@ -218,26 +208,26 @@ const Cards = () => (
                   />
                 </div>
                 <div className="legend">
-                  <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Bounce <i className="fas fa-circle text-warning"></i>
-                  Unsubscribe
+                  <i className="fa fa-circle text-info"></i>
+                  Open <i className="fa fa-circle text-danger"></i>
+                  Bounce <i className="fa fa-circle text-warning"></i>
                 </div>
                 <hr></hr>
                 <div className="stats">
                   <i className="far fa-clock"></i>
-                  Campaign sent 2 days ago
+                  Project Ended 2 days ago
                 </div>
               </Card.Body>
             </Card>
           </Col>
         </Row>
+        <br></br>
         <Row>
           <Col md="6">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">2017 Sales</Card.Title>
-                <p className="card-category">All products including Taxes</p>
+                <Card.Title as="h4">2021 Survey Analysis</Card.Title>
+                <p className="card-category">All projects including responses</p>
               </Card.Header>
               <Card.Body>
                 <div className="ct-chart" id="chartActivity">
@@ -294,7 +284,7 @@ const Cards = () => (
                       axisX: {
                         showGrid: false,
                       },
-                      height: "245px",
+                      height: "345px",
                     }}
                     responsiveOptions={[
                       [
@@ -330,7 +320,7 @@ const Cards = () => (
             <Card className="card-tasks">
               <Card.Header>
                 <Card.Title as="h4">Tasks</Card.Title>
-                <p className="card-category">Backend development</p>
+                <p className="card-category">Surveys</p>
               </Card.Header>
               <Card.Body>
                 <div className="table-full-width">
@@ -349,8 +339,7 @@ const Cards = () => (
                           </Form.Check>
                         </td>
                         <td>
-                          Sign contract for "What are conference organizers
-                          afraid of?"
+                          Complete Survey for test data
                         </td>
                         <td className="td-actions text-right">
                           <OverlayTrigger
@@ -397,8 +386,7 @@ const Cards = () => (
                           </Form.Check>
                         </td>
                         <td>
-                          Lines From Great Russian Literature? Or E-mails From
-                          My Boss?
+                          Add in survey details for project Surveymin
                         </td>
                         <td className="td-actions text-right">
                           <OverlayTrigger
@@ -445,9 +433,7 @@ const Cards = () => (
                           </Form.Check>
                         </td>
                         <td>
-                          Flooded: One year later, assessing what was lost and
-                          what was found when a ravaging rain swept through
-                          metro Detroit
+                          Collect the responses from the agriculture development authority
                         </td>
                         <td className="td-actions text-right">
                           <OverlayTrigger
@@ -584,7 +570,7 @@ const Cards = () => (
                             </Form.Check.Label>
                           </Form.Check>
                         </td>
-                        <td>Unfollow 5 enemies from twitter</td>
+                        <td>Update data to twitter log</td>
                         <td className="td-actions text-right">
                           <OverlayTrigger
                             overlay={
@@ -633,33 +619,16 @@ const Cards = () => (
       </Container>
     </>
 )
-const dash = {
-    responses: '25',
-    projects: '10',
-    Users: '12',
-    teams: '2'
-};
+
+
+
 export default class MyCard extends Component {
   render() {
     return (
     <div className='dashboard'>
-        <Cards/>
+        <DashCards />
     </div>
         
     );
   }
 }
-        {/* <div className="row">
-            <div className="col">
-                <Cards value={dash.responses} />
-            </div>
-            <div className="col">
-                <Cards value={dash.projects} />
-            </div>
-            <div className="col">
-                <Cards value={dash.Users} />
-            </div>
-            <div className="col">
-                <Cards value={dash.teams} />
-            </div>
-        </div> */}

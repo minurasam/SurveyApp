@@ -14,8 +14,6 @@ import AnalyticsPage from './surveys/Analytics'
 import AnalyticsTabulatorPage from './surveys/AnalyticsTabulator'
 import SurveyList from './survey_pages/SurveyList'
 import CreateSurvey from './survey_pages/create_survey'
-import SurveyResult from './survey_pages/surveyResult'
-import { Provider } from 'react-redux'
 import CacheRoute, { CacheSwitch } from 'react-router-cache-route'
 import Dashboard from "./Dashboard/Dashboard";
 
