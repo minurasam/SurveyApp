@@ -24,7 +24,7 @@ export const SidebarData = [
     },
     {
         title: 'Overview',
-        path: '/overview',
+        path: '/',
         icon: <AiIcons.AiFillHome />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
