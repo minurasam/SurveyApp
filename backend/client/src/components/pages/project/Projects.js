@@ -33,6 +33,10 @@ const Project = (props) => (
         <button className="btn btn-danger">  
           <a style={{ color:"black"}} href="#" onClick={() => { props.deleteProject(props.projects._id) }}> <b>Delete</b> </a>
         </button> 
+        
+        <button className="btn btn-primary">
+            <Link to={"#"}><b style={{ color:"black"}}>New button</b></Link> 
+        </button> 
       
     </CardBody  >
   </Card>

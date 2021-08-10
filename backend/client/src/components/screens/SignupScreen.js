@@ -135,8 +135,10 @@ export const RegisterScreen = ({history}) => {
                     by filling out the information below.</h1>   
                 
                 <div className='form-inputs'>
-                    <label htmlFor='name' className='form-label'>
-                        Full Name 
+                  <div className="row">
+                    <div className='col-6'>
+                  <label htmlFor='name' className='form-label'>
+                        First Name 
                     </label>
                     <input id='name' 
                            type='text' 
@@ -146,9 +148,21 @@ export const RegisterScreen = ({history}) => {
                            value={name}
                            onChange={(e) => setName(e.target.value)}        
                     />
-                </div>
-
-                <div className='form-inputs'>
+                    </div>
+                    <div className='col-6'>
+                    <label htmlFor='username' className='form-label'>
+                        Last Name 
+                    </label>
+                    <input id='username' 
+                           type='text' 
+                           name='username' 
+                           className='form-input' 
+                           placeholder='Enter your Username'
+        
+                    />
+                  </div>
+                  </div>
+                  <div className='form-inputs'>
                     <label htmlFor='username' className='form-label'>
                         Username 
                     </label>
@@ -160,7 +174,12 @@ export const RegisterScreen = ({history}) => {
                            value={username}
                            onChange={(e) => setUsername(e.target.value)}        
                     />
+</div>
                 </div>
+
+                
+                  
+        
 
                 <div className='form-inputs'>
                     <label htmlFor='email' className='form-label'>
