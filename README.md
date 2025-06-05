@@ -15,18 +15,18 @@ SurveyApp is a full-stack web application designed to create, manage, and partic
 
 ### Technologies Used
    - Frontend:
-        React
-        HTML5
-        CSS3
-        JavaScript
+        - React
+        - HTML5
+        - CSS3
+        - JavaScript
    - Backend:
-        Node.js
-        Express.js
-        MongoDB
+        - Node.js
+        - Express.js
+        - MongoDB
    - Others:
-        Mongoose
-        JWT for authentication
-        Axios for API requests
+        - Mongoose
+        - JWT for authentication
+        - Axios for API requests
 
 
 ## How to run this sample application
