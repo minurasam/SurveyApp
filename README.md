@@ -1,6 +1,33 @@
 # Survey Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+SurveyApp is a full-stack web application designed to create, manage, and participate in surveys. Built with a React frontend and a Node.js/Express backend, it offers a seamless experience for both administrators and participants.
+
+## Features
+- Survey Creation: Admins can create surveys with multiple questions.
+
+- Survey Participation: Users can participate in available surveys.
+
+- Real-time Results: View survey results in real-time.
+
+- User Authentication: Secure login and registration system.
+
+- Responsive Design: Optimized for both desktop and mobile devices.
+
+### Technologies Used
+   - Frontend:
+        React
+        HTML5
+        CSS3
+        JavaScript
+   - Backend:
+        Node.js
+        Express.js
+        MongoDB
+   - Others:
+        Mongoose
+        JWT for authentication
+        Axios for API requests
+
 
 ## How to run this sample application
  - git clone (https://github.com/minurasam/SurveyApp.git)
